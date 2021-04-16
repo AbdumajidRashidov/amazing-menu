@@ -1,0 +1,152 @@
+html, body, .page {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
+    color: #fff;
+    overflow: hidden; 
+  }
+  
+  * {
+    font-family: 'open sans', 'lato', 'helvetica', sans-serif;
+  }
+  
+  .page {
+    position: absolute;
+  }
+  
+  #page1 {
+    left: 0;
+  }
+  
+  #page2, #page3, #page4, #page5 {
+    left: 200%;
+  }
+  
+  #page1 { background: rgb(0, 153, 255); }
+  #page2 { background: rgb(54, 248, 87); }
+  #page3 { background: rgb(30, 247, 163); }
+  #page4 { background: rgb(224, 63, 63); }
+  #page5 { background: rgb(128, 0, 255); }
+  
+  #t2:target #page2,
+  #t3:target #page3,
+  #t4:target #page4,
+  #t5:target #page5 {
+    transform: translateX(-190%);
+    transition-delay: .4s !important;
+  }
+  
+  #t2:target #page1, 
+  #t3:target #page1,
+  #t4:target #page1,
+  #t5:target #page1{
+    background: black;
+  }
+  
+  #t2:target #page1 .icon, 
+  #t3:target #page1 .icon,
+  #t4:target #page1 .icon,
+  #t5:target #page1 .icon {
+    filter: blur(3px);
+  }
+  
+  .icon {
+    color: #fff;
+    font-size: 32px !important;
+    display: block;
+  }
+  
+  ul .icon:hover {
+    opacity: 0.5;
+  }
+  
+  .page .icon .title {
+    line-height: 2;
+  }
+  
+  #t2:target ul .icon,
+  #t3:target ul .icon,
+  #t4:target ul .icon,
+  #t5:target ul .icon{
+    transform: scale(.6);
+    transition-delay: .25s;
+  }
+  
+  #t2:target #apple,
+  #t3:target #rocket,
+  #t4:target #yurak,
+  #t4:target #plus {
+    transform: scale(1.2) !important;
+  }
+  
+  ul {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 280px;
+    width: 10%;
+    padding: 0;
+    text-align: center;
+   }
+  
+  #menu .icon {
+      display: flex;
+      flex-flow: column;
+    margin: 30px 0;
+    transition: all .5s ease-out !important;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .title, .hint {
+    display: block;
+  }
+  
+  .title {
+    font-size: 38px;
+  }
+  
+  .hint {
+    font-size: 13px;
+  }
+
+  .page .icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10%;
+    left: 0;
+    width: 270px;
+    height: 170px;
+    margin: auto;
+    text-align: center;
+    font-size: 80px;
+    line-height: 1.3;
+    transform: translateX(360%);
+    transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+  }
+  
+  .page#page1 .icon {
+    height: 220px;
+  }
+  
+  .page#page1 .icon {
+    transform: translateX(10%) !important;
+  }
+  
+  #t2:target .page#page2 .icon,
+  #t3:target .page#page3 .icon,
+  #t4:target .page#page4 .icon,
+  #t5:target .page#page5 .icon {
+    transform: translateX(0) !important;
+    transition-delay: 1s;
+  }
+  
+  
